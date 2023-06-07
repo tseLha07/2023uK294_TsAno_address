@@ -223,38 +223,6 @@
 			"city": "Kliteh",
 			"country_id": 92,
 			"importdate": "2022-03-17T08:08:35Z"
-		},
-		{
-			"id": 29,
-			"street_number": "55",
-			"street_name": "Dorton Pass",
-			"city": "Huangqiao",
-			"country_id": 42,
-			"importdate": "2022-03-17T08:08:35Z"
-		},
-		{
-			"id": 30,
-			"street_number": "4",
-			"street_name": "Clemons Trail",
-			"city": "Aricapampa",
-			"country_id": 158,
-			"importdate": "2022-03-17T08:08:35Z"
-		},
-		{
-			"id": 31,
-			"street_number": "33981",
-			"street_name": "Milwaukee Way",
-			"city": "Mesquite",
-			"country_id": 217,
-			"importdate": "2022-03-17T08:08:35Z"
-		},
-		{
-			"id": 32,
-			"street_number": "43758",
-			"street_name": "Dahle Drive",
-			"city": "Paipa",
-			"country_id": 47,
-			"importdate": "2022-03-17T08:08:35Z"
 		}
     ]
     }
