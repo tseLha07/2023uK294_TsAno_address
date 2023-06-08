@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Paper } from "@mui/material";
 import AddressService from "../services/AddressService";
+import { Link } from "react-router-dom";
 
 export interface AddressAttributes{
     id: number;
@@ -33,7 +34,7 @@ function Address(prop : AddressAttributes) {
         <span className='addressInfofont'>Country: {prop.country_id}</span><br />
         <span className='addressInfofont'>Import Date: {prop.importdate}</span><br />
         <Box  sx={{ '& button': { marginLeft: 1, marginTop: 2, marginBottom: 2}}}>
-        <Button variant="outlined" size="small" onClick={handleViewButton}>View</Button>
+        <Link to={`/address/${prop.id}`}><Button variant="outlined" size="small" onClick={handleViewButton}>View</Button></Link>
         <Button variant="outlined" size="small" onClick={handleUpdateButton}>Update</Button>
         <Button variant="outlined" size="small" onClick={handleDeleteButton}>Delete</Button>
         </Box>

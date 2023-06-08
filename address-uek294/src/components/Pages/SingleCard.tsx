@@ -12,7 +12,7 @@ import { useNavigate, useParams } from "react-router-dom";
 function SingleCard() {
     let {id} = useParams();
   const navigate = useNavigate()
-  const [addressList, setAddressList] = useState<AddressAttributes[]>([]);
+  const [addressList, setAddressList] = useState<AddressAttributes>();
 
   useEffect(() => {
     function load() {
@@ -36,20 +36,18 @@ function SingleCard() {
       <div className="body">
         <Container sx={{ marginY: 5 }}>
           <Grid container spacing={5}>
-            {addressList.map((address) => {
-              return (
+  
                 <>
                   <Address
-                    id={address?.id!}
-                    street_number={address?.street_number!}
-                    street_name={address?.street_name!}
-                    city={address?.city!}
-                    country_id={address?.country_id!}
-                    importdate={address?.importdate!}
+                    id={addressList?.id!}
+                    street_number={addressList?.street_number!}
+                    street_name={addressList?.street_name!}
+                    city={addressList?.city!}
+                    country_id={addressList?.country_id!}
+                    importdate={addressList?.importdate!}
                   />
                 </>
-              );
-            })}
+            
           </Grid>
         </Container>
       </div>

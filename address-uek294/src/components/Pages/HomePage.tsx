@@ -14,7 +14,6 @@ function HomePage() {
   const [addressList, setAddressList] = useState<AddressAttributes[]>([]);
 
   useEffect(() => {
-    function load() {
       AddressService()
         .getAddress()
         .then((data) => {
@@ -24,8 +23,7 @@ function HomePage() {
           navigate("/login")
         });
     }
-    load()
-  });
+  , []);
 
   return (
     <>
