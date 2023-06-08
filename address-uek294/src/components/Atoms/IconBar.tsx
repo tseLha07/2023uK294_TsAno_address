@@ -9,7 +9,7 @@ const IconBar = () => {
         aria-label="open drawer"
         sx={{ mr: 2 }}
       >
-        <img src="https://freepngimg.com/thumb/kirby/1-2-kirby-png-image.png" className="barLogo"/>
+        <img src="https://icon-library.com/images/software-crystal-msn.ico.ico" className="barLogo"/>
       </IconButton>
     </>
   );

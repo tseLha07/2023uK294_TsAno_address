@@ -7,22 +7,25 @@ import Footer from "../Molecules/Footer";
 import { useEffect, useState } from "react";
 import AddressService from "../../services/AddressService";
 import { error } from "console";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-function HomePage() {
+function SingleCard() {
+    let {id} = useParams();
   const navigate = useNavigate()
   const [addressList, setAddressList] = useState<AddressAttributes[]>([]);
 
   useEffect(() => {
     function load() {
-      AddressService()
-        .getAddress()
-        .then((data) => {
-          setAddressList(data);
-        }).catch((error) => {
-          console.log(error)
-          navigate("/login")
-        });
+        if(id){
+            AddressService()
+            .getAddressByID(parseInt(id))
+            .then((addressList) => {
+              setAddressList(addressList);
+            }).catch((error) => {
+              console.log(error)
+              navigate("/login")
+            });    
+        }
     }
     load()
   });
@@ -55,4 +58,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default SingleCard;

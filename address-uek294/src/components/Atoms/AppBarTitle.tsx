@@ -3,12 +3,10 @@ import Typography from "@mui/material/Typography";
 export default function AppBarTitle() {
   return (
     <>
-      <Typography
+      <Typography component={"span"}
         sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-          <div className='barTitle'>Ghhouli's</div>
-        <Typography>
-        <div className='barSubtitle'>Address Book</div>
-        </Typography>
+          <span className='barTitle'>Ghhouli's</span>
+        <span className='barSubtitle'> Address Book</span>
       </Typography>
     </>
   );
